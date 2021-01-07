@@ -27,11 +27,11 @@ const SignInBox = (props) => {
     return (
     <div className={styles.body}>
     <div className={styles.main}>
-    <p className={styles.sign} align="center">Sign in</p>
+    <p className={styles.sign} align="center">Register</p>
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form1}>
       <input className={styles.un} name= 'userName' type="text" align="center" ref={register} placeholder="Username" />
       <input className={styles.pass} name= 'userpassword' type="password" ref={register}  align="center"  placeholder="Password" />
-      <input type='submit' value="Sign in" className={`${styles.submit} ${styles.a}`} align="center" />
+      <input type='submit' value="Register" className={`${styles.submit} ${styles.a}`} align="center" />
       <p className={styles.forgot} align="center"><a href="#">Forgot Password?</a></p>
             
     </form>         
