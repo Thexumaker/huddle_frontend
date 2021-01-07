@@ -24,10 +24,13 @@
     flex-flow: row wrap;
     justify-content: space-around;
 }
-
+.offertitle {
+    padding-bottom: 40px;
+}
 .offerItem {
     height:250px;
     width:250px;
+    padding-bottom: 400px;
 }
 .offerimg {
     height:200px;

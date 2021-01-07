@@ -18,27 +18,27 @@ Our aim is to undo much of the harms created by social media by discouraging swi
 </p>
         </div>
         <div className={styles.mains}>
-            <h1 className={styles.purple}>What do we offer?</h1>
+            <h1 className={`${styles.purple} ${styles.offertitle}`}>What do we offer?</h1>
             <div className= {styles.offerBox}>
                 <div className={styles.offerItem}>
                 <img className={styles.offerimg} src = '/images/swipe.png'></img>
                     <h4> No More Swiping </h4>
-                    <p></p>
+                    <p>Removing the gamification of dating</p>
                 </div>
                 <div className={styles.offerItem}>
                     <img className={styles.offerimg} src = '/images/clip-944.png'></img>
                     <h4> Group Matches </h4>
-                    <p>Takes the stress from having to instantly click with your match</p>
+                    <p>Takes the pressure of 1 on 1 settings</p>
                 </div>
                 <div className={styles.offerItem}>
                     <img className={styles.offerimg} src='/images/msg.png'></img>
-                    <h4> In App Chats </h4>
-                    <p></p>
+                    <h4> In App Messaging </h4>
+                    <p>No need to switch off the app to set events or to chat</p>
                 </div>
                 <div className={styles.offerItem}>
                     <img className={styles.offerimg} src='/images/restaurant.png'></img>
-                    <h4> Discounts for local businesses </h4>
-                    <p></p>
+                    <h4> Support for local businesses </h4>
+                    <p>Sponsored events in app are integrated with local business needs</p>
                 </div>
             </div>
         </div>

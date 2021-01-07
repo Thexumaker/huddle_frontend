@@ -3,35 +3,37 @@
     display: flex;
     min-height: 56px;
     align-items: center;
+    justify-content: space-around;
    
     
 
 
 }
-
-.middle {
-    flex: 9;
+.left {
+    flex: 1 1;
     text-align: center;
-    display: flex;
-    justify-content: space-around;
+}
+.middle {
+    flex: 1 1;
+    text-align: center;
+    
 
 
 
 }
 .logo {
-    width: 100px;
-    height: 120px;
-  }
+    width:200px;
+    height:100px;
+}
+
 .item {
+    cursor: pointer;
     font-size: 25px;
-    padding: 22px;
+    padding: 50px;
     display: inline-block;
+    flex:auto;
     
   }
   .item, .logo { transition: all .2s ease-in-out; }
   .item:hover, .logo:hover { transform: scale(1.1); }
-  .left {
-    flex: 1;
-    padding-left: 20px;
-  }
-  
+

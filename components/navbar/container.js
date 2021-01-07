@@ -6,13 +6,13 @@ const Container = ({links}) => {
     return (
         <div className={styles.navi}>
         <div className={styles.left}>
-        <img className={styles.logo} src="images/huddle.svg"></img>
+       <a href='/'> <img className={styles.logo}  src="images/huddle.svg"></img></a>
 
         </div>
         <div className={styles.middle}>
         {links.map( (link) => (
         
-        <Link href="/login">
+        <Link href={`/${link.replace(/\s/g, '').toLowerCase()}`}>
         <a className={styles.item}>{` ${link}`}</a>
       </Link>
       
