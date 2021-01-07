@@ -4,6 +4,7 @@
     min-height: 56px;
     align-items: center;
     justify-content: space-around;
+
    
     
 
@@ -14,7 +15,7 @@
     text-align: center;
 }
 .middle {
-    flex: 1 1;
+    flex: 2 2;
     text-align: center;
     
 
@@ -24,6 +25,7 @@
 .logo {
     width:200px;
     height:100px;
+
 }
 
 .item {
@@ -31,9 +33,16 @@
     font-size: 25px;
     padding: 50px;
     display: inline-block;
-    flex:auto;
+
     
   }
   .item, .logo { transition: all .2s ease-in-out; }
   .item:hover, .logo:hover { transform: scale(1.1); }
 
+  @media only screen and (max-width: 600px) {
+      .navi {
+        flex-wrap:wrap;
+        flex-direction: column;
+      }
+    
+  }

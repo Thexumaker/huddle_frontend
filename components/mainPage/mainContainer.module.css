@@ -29,3 +29,11 @@
 .purple {
     color: rgba(4, 0, 56, 0.71);
 }
+
+@media only screen and (max-width: 600px) {
+    .img {
+        max-width:400px;
+      
+    }
+  
+}
