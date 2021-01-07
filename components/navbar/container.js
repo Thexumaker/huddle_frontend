@@ -12,7 +12,7 @@ const Container = ({links}) => {
         <div className={styles.middle}>
         {links.map( (link) => (
         
-        <Link href={`/${link.replace(/\s/g, '').toLowerCase()}`}>
+        <Link key = {link} href={`/${link.replace(/\s/g, '').toLowerCase()}`}>
         <a className={styles.item}>{` ${link}`}</a>
       </Link>
       

@@ -1,24 +1,42 @@
-const LoginBox = () => {
+import styles from './loginBox.module.css'
+import axios from 'axios';
+import { useForm } from "react-hook-form";
+import Router from 'next/router'
+
+
+
+
+const LoginBox = (props) => {
+    const { register, handleSubmit } = useForm();
+    const onSubmit = async (data) => {
+        alert(JSON.stringify(data))
+        const res = await axios.post('https://huddledatingapp.herokuapp.com/user',
+        {
+            email: data.userName,
+            password: data.userpassword
+
+        })
+        console.log(res)
+        alert(JSON.stringify(res.data))
+        Router.push('/')
+
+
+    }
+    
 
     return (
-        <div>
-            <h1>Log In </h1>
-            <form>
-            <label>
-                Username:
-                <input type="text" name="username" />
-                </label>
-            <label>
-                Password:
-                <input type="text" name="password" />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
-            <p>Forgot username?</p>
-          <p>Forgot password?</p>
-
-
-        </div>
+    <div className={styles.body}>
+    <div className={styles.main}>
+    <p className={styles.sign} align="center">Sign in</p>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form1}>
+      <input className={styles.un} name= 'userName' type="text" align="center" ref={register} placeholder="Username" />
+      <input className={styles.pass} name= 'userpassword' type="password" ref={register}  align="center"  placeholder="Password" />
+      <input type='submit' value="Sign in" className={`${styles.submit} ${styles.a}`} align="center" />
+      <p className={styles.forgot} align="center"><a href="#">Forgot Password?</a></p>
+            
+    </form>         
+    </div>
+    </div>
     )
 }
 export default LoginBox;
