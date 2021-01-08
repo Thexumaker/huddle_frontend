@@ -6,17 +6,20 @@ import Router from 'next/router'
 
 
 
+
 const LoginBox = (props) => {
+    axios.defaults.withCredentials = true
+
+
     const { register, handleSubmit } = useForm();
     const onSubmit = async (data) => {
         alert(JSON.stringify(data))
-        const res = await axios.post('https://huddledatingapp.herokuapp.com/user',
+        const res = await axios.post('https://huddledatingapp.herokuapp.com/user/',
         {
             email: data.userName,
             password: data.userpassword
 
         })
-        console.log(res)
         alert(JSON.stringify(res.data))
         Router.push('/')
 
