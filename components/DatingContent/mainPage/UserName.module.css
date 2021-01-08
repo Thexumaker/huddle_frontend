@@ -37,8 +37,7 @@
   .card:hover {
     transform: translateY(-40px);
     transition: 0.4s ease-in;
-    height: 320px;
-    width: 240px;
+
   }
   
 
