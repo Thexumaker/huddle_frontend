@@ -21,7 +21,6 @@ const LoginBox = (props) => {
 
         })
         alert(JSON.stringify(res.data))
-        Router.push('/')
 
 
     }
