@@ -56,7 +56,7 @@ jwt: {
   },
 database: {
     type: "mongodb",
-    uri: "mongodb+srv://HuddleAdmin:uCD9z0lA9XAQ0xos@deployment.3gni0.mongodb.net/test",
+    uri: process.env.DATABASE_URL,
     w: "majority",
     useNewUrlParser: true,
     useUnifiedTopology: true,
