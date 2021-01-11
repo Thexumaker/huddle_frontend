@@ -14,7 +14,7 @@ const LoginBox = (props) => {
     const { register, handleSubmit } = useForm();
     const onSubmit = async (data) => {
         alert(JSON.stringify(data))
-        const res = await axios.post('https://huddledatingapp.herokuapp.com/user/',
+        const res = await axios.post('http://localhost:3001/user',
         {
             email: data.userName,
             password: data.userpassword
