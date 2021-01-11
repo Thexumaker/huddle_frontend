@@ -23,37 +23,13 @@ const options = {
 
     }),
 ],session:{
-    jwt: true, 
+    jwt: false, 
   
     // Seconds - How long until an idle session expires and is no longer valid.
     maxAge: 30 * 24 * 60 * 60, // 30 days
 }
 ,
-jwt: {
-    // A secret to use for key generation - you should set this explicitly
-    // Defaults to NextAuth.js secret if not explicitly specified.
-    secret: process.env.JWT_SECRET,
-    
-    
-    // Set to true to use encryption. Defaults to false (signing only).
-    encryption: false,
-  
-    // You can define your own encode/decode functions for signing and encryption
-    // if you want to override the default behaviour.
-    encode: async ({ secret, token, maxAge }) => {
-        const encodedToken = jwt.sign(token, secret, { algorithm: 'HS512' })
-      
-        return encodedToken
-    },
-    decode: async ({ secret, token, maxAge }) => {
-        const verify = jwt.verify(token, secret)
-        return verify
-    },
-      
-        
-    // encode: async ({ secret, token, maxAge }) => {},
-    // decode: async ({ secret, token, maxAge }) => {},
-  },
+
 database: {
     type: "mongodb",
     uri: process.env.DATABASE_URL,
@@ -61,7 +37,7 @@ database: {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     retryWrites: true,
-    
+
   }
 
 }
