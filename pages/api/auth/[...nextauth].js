@@ -7,6 +7,7 @@ const options = {
     
   // Configure one or more authentication providers
   debug: true,
+  
   providers: [
     Providers.GitHub({
       clientId: process.env.GITHUB_ID,
