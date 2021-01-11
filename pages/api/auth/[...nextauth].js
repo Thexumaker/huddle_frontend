@@ -7,7 +7,7 @@ const options = {
     
   // Configure one or more authentication providers
   debug: true,
-  
+
   providers: [
     Providers.GitHub({
       clientId: process.env.GITHUB_ID,
@@ -58,7 +58,7 @@ jwt: {
   },
 database: {
     type: "mongodb",
-    uri: process.env.DATABASE_URL,
+    url: process.env.DATABASE_URL,
     w: "majority",
     useNewUrlParser: true,
     useUnifiedTopology: true,
