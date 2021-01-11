@@ -32,6 +32,7 @@ const options = {
 }
 ,
 database: {
+    
     type: "mongodb",
     url: process.env.DATABASE_URL,
     w: "majority",
