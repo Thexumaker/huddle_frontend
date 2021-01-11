@@ -46,7 +46,6 @@ jwt: {
     },
     decode: async ({ secret, token, maxAge }) => {
         const verify = jwt.verify(token, secret)
-      
         return verify
     },
       
