@@ -14,6 +14,11 @@ const options = {
 
       clientSecret: process.env.GITHUB_SECRET
     }),
+    Providers.Google({
+        clientId: process.env.GOOGLE_ID,
+  
+        clientSecret: process.env.GOOGLE_SECRET
+      }),
     Providers.Twitter({
       clientId: process.env.TWITTER_ID,
       clientSecret: process.env.TWITTER_SECRET
@@ -25,7 +30,7 @@ const options = {
 
     }),
 ],session:{
-    jwt: false, 
+    jwt: true, 
   
     // Seconds - How long until an idle session expires and is no longer valid.
     maxAge: 30 * 24 * 60 * 60, // 30 days
