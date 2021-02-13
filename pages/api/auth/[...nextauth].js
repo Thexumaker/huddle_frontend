@@ -1,6 +1,7 @@
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 const jwt = require('jsonwebtoken')
+import {signIn,signOut,useSession} from 'next-auth/client'
 
 
 const options = {
@@ -68,8 +69,26 @@ database: {
     useUnifiedTopology: true,
     retryWrites: true,
     
+  },
+  pages: {
+    signIn: '/auth/signin',
+    },
+  callbacks: {
+    /**
+     * @param  {string} url      URL provided as callback URL by the client
+     * @param  {string} baseUrl  Default base URL of site (can be used as fallback)
+     * @return {string}          URL the client will be redirect to
+     */
+    async redirect(url, baseUrl) {
+      if (url.includes('homePage')) {
+        return baseUrl
+
+      }
+      return baseUrl
+    }
   }
 
 }
+
 
 export default (req, res) => NextAuth(req, res, options)
