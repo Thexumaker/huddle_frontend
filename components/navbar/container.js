@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import styles from './container.module.css'
 
+import {signIn,signOut,useSession} from 'next-auth/client'
 const Container = ({links}) => {
-
+    const [session,loading] = useSession()
     return (
         <div className={styles.navi}>
         <div className={styles.left}>
@@ -10,13 +11,21 @@ const Container = ({links}) => {
 
         </div>
         <div className={styles.middle}>
-        {links.map( (link) => (
-        
-        <Link key = {link} href={`/${link.replace(/\s/g, '').toLowerCase()}`}>
-        <a className={styles.item}>{` ${link}`}</a>
+        <Link key = {'About'} href='about'>
+        <a className={styles.item}>About</a>
       </Link>
-      
-    ))}
+      <Link key = {'Blog'} href='blog'>
+        <a className={styles.item}>Blog</a>
+      </Link>
+      <Link key = {'Sign Up'} href='signup'>
+        <a className={styles.item}>Sign Up</a>
+      </Link>
+      {!session &&<> <a onClick={signIn} className={styles.item}>Sign In</a> </>}
+      {session && <> <a onClick={signOut} className={styles.item}>Sign Out</a> </> }
+    
+
+        
+
     </div>
         </div>
 

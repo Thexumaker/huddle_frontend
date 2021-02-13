@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import styles from './bottomNav.module.css'
 import {AiOutlineUser, AiOutlineMessage, AiOutlineHome} from "react-icons/ai"
+import {signIn,signOut,useSession} from 'next-auth/client'
+import { useRouter } from 'next/router'
+
 
 const BottomNav = ({icons}) => {
+    
 
     return (
 
@@ -19,10 +23,10 @@ const BottomNav = ({icons}) => {
                     <AiOutlineMessage className={styles.icon} />
                 </Link>
                 </li>
-                <li className={styles.li}>
-                <Link href="/">
+                <li onClick = {signOut} className={styles.li}>
+
                     <AiOutlineHome className={styles.icon} />
-                </Link>
+
                 </li>
             </ul>
         

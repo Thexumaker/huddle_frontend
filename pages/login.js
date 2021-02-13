@@ -6,7 +6,9 @@ export default function Home() {
     return (
       <div>
           <Container links = {['About', 'Blog', 'Log in','Sign Up']} />
+          
           <LoginBox />
+
           
       
       </div>
