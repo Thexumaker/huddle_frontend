@@ -70,6 +70,9 @@ database: {
     retryWrites: true,
     
   },
+  pages: {
+    signIn: '/auth/signin',
+    },
   callbacks: {
     /**
      * @param  {string} url      URL provided as callback URL by the client
@@ -82,9 +85,7 @@ database: {
         return baseUrl
 
       }
-      return url.startsWith(baseUrl)
-        ? url
-        : baseUrl
+      return baseUrl
     }
   }
 
