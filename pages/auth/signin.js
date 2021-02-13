@@ -1,6 +1,6 @@
 import { providers, signIn } from 'next-auth/client'
 
-import styles from './loginBox.module.css'
+import styles from './signin.module.css'
 
 
 export default function SignIn({ providers }) {

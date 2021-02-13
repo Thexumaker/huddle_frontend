@@ -81,7 +81,6 @@ database: {
      */
     async redirect(url, baseUrl) {
       if (url.includes('homePage')) {
-        console.log(baseUrl)
         return baseUrl
 
       }
