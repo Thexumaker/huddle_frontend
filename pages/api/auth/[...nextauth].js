@@ -7,7 +7,6 @@ import {signIn,signOut,useSession} from 'next-auth/client'
 const options = {
     
   // Configure one or more authentication providers
-  debug: true,
 
   providers: [
     Providers.GitHub({
@@ -79,6 +78,22 @@ database: {
      * @param  {string} baseUrl  Default base URL of site (can be used as fallback)
      * @return {string}          URL the client will be redirect to
      */
+    async signIn(user, account, profile) {
+    const isAllowedToSignIn = true
+    console.log("______")
+
+    console.log(profile)
+
+    console.log("_______")
+    if (isAllowedToSignIn) {
+      return true
+    } else {
+      // Return false to display a default error message
+      return false
+      // Or you can return a URL to redirect to:
+      // return '/unauthorized'
+    }
+  },
     async redirect(url, baseUrl) {
       if (url.includes('homePage')) {
         return baseUrl

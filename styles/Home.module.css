@@ -1,0 +1,14 @@
+
+.grid {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content:center;
+
+
+}
+.gridItem {
+
+    width:300px;
+
+}

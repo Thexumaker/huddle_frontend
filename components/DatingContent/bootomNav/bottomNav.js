@@ -24,9 +24,9 @@ const BottomNav = ({icons}) => {
                 </Link>
                 </li>
                 <li onClick = {signOut} className={styles.li}>
-
+                <Link  href="/">
                     <AiOutlineHome className={styles.icon} />
-
+                </Link>
                 </li>
             </ul>
         
